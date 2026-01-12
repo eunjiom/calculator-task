@@ -18,6 +18,36 @@ public class Main {
         System.out.print("사칙연산을 입력하세요(+, -, *, /): ");
         char charbox = sc.nextLine().charAt(0);
 
+        int result = 0;
+
+        int sum = num + num2;
+        int sub = num - num2;
+        int mul = num * num2;
+        int div = num / num2;
+
+        switch (charbox){
+            case '+':
+                System.out.println("a+b= " + sum);
+                break;
+
+            case '-':
+                System.out.println("a-b= " + sub);
+                break;
+
+            case '*':
+                System.out.println("a*b= " + mul);
+                break;
+
+            case '/':
+                System.out.println("a/b= " + div);
+                break;
+
+            default:
+                System.out.println("다시 입력해주세요");
+        }
+
+
+
 
     }
 }
