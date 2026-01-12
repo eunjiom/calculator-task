@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Calculator {
 
-    ArrayList<Integer> names = new ArrayList<>();
+    private ArrayList<Integer> names = new ArrayList<>();
 
     public int calculator(int a, int b, char op) {
         int result = 0;
@@ -25,7 +25,7 @@ public class Calculator {
             case '/':
                 if (b == 0) {
                     System.out.println("b에 0을 입력할 수 없습니다");
-                    return  0;
+                    return 0;
                 }
                 result = a / b;
                 break;
@@ -36,8 +36,14 @@ public class Calculator {
 
         }
 
+        names.add(result);
         return result;
-
     }
 
+    public ArrayList<Integer> getResult() {
+        return names;
+    }
+
+
 }
+
