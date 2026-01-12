@@ -15,5 +15,9 @@ public class Main {
         int num2 = Integer.parseInt(sc.nextLine());
         System.out.println("b: " + num2);
 
+        System.out.print("사칙연산을 입력하세요(+, -, *, /): ");
+        char charbox = sc.nextLine().charAt(0);
+
+
     }
 }
