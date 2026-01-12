@@ -1,5 +1,6 @@
 package step1;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Main {
@@ -50,6 +51,16 @@ public class Main {
 
                 default:
                     System.out.println("잘못 입력하였습니다. 다시 입력해주세요.");
+                    break;
+
+            }
+            {
+            System.out.print("더 진행하시겠습니까? (exit 입력 시 종료): ");
+            String exit =  sc.nextLine();
+
+            if (exit.equals("exit"))
+                 i = 2;
+
             }
 
         }
