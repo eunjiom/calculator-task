@@ -23,7 +23,6 @@ public class Main {
         int sum = num + num2;
         int sub = num - num2;
         int mul = num * num2;
-        int div = num / num2;
 
         switch (charbox){
             case '+':
@@ -39,7 +38,14 @@ public class Main {
                 break;
 
             case '/':
+                if (num2 == 0)
+            {
+                System.out.println("b에 0을 입력할 수 없습니다.");
+            }
+                else {
+                    int div = num / num2;
                 System.out.println("a/b= " + div);
+            }
                 break;
 
             default:
