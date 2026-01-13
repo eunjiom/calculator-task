@@ -38,6 +38,15 @@ public class Main {
         ArrayList<Integer> newResult = calculator.getResult();
         System.out.println(" # 저장된 결과 조회: "+ newResult);
 
+        // 먼저 저장된 결과 삭제하기
+        System.out.print("먼저 저장된 결과를 삭제할까요?(yes or no): ");
+        String remove = sc.nextLine();
+
+        if (remove.equals("yes")) {
+            calculator.removeResult();
+        }
+
+
 
 
 

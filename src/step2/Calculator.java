@@ -51,5 +51,8 @@ public class Calculator {
         this.names = newResult;
     }
 
+    public void removeResult() {
+        names.remove(0);
+    }
 }
 
