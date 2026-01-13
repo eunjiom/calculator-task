@@ -1,5 +1,6 @@
 package step2;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -12,26 +13,32 @@ public class Main {
         int i = 1;
         while (i < 2) {
             System.out.print("첫번째 숫자를 입력하세요: ");
-            int a = sc.nextInt();
+            int a = Integer.parseInt(sc.nextLine());
 
             System.out.print("두번째 숫자를 입력하세요: ");
-            int b = sc.nextInt();
+            int b = Integer.parseInt(sc.nextLine());
 
             System.out.print("사칙연산을 입력하세요: ");
-            char op = sc.next().charAt(0);
+            char op = sc.nextLine().charAt(0);
 
             // 결과 받기
             int result = calculator.calculator(a, b, op);
-            System.out.println("결과 = " + +result);
+            System.out.println("결과 = " + result);
 
             // 종료안내
             System.out.print("더 진행하시겠습니까? (exit 입력 시 종료): ");
-            String exit = sc.next();
+            String exit = sc.nextLine();
 
             if (exit.equals("exit"))
                 i = 2;
 
         }
+
+        // getter
+        ArrayList<Integer> newResult = calculator.getResult();
+        System.out.println(" # 저장된 결과 조회: "+ newResult);
+
+
 
 
 

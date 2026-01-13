@@ -6,7 +6,9 @@ public class Calculator {
 
     private ArrayList<Integer> names = new ArrayList<>();
 
+
     public int calculator(int a, int b, char op) {
+
         int result = 0;
 
         switch (op) {
@@ -38,12 +40,16 @@ public class Calculator {
 
         names.add(result);
         return result;
+
     }
 
     public ArrayList<Integer> getResult() {
         return names;
     }
 
+    public void setResult(ArrayList<Integer> newResult) {
+        this.names = newResult;
+    }
 
 }
 
