@@ -31,4 +31,5 @@ exit를 이용하여 계산을 종료할 수 있습니다.
 * 0으로 나누는 경우 오류 문구 및 결과 0 출력
 
 **6. 흐름(플로우차트)**
+
 <img width="619" height="820" alt="step1 흐름" src="https://github.com/user-attachments/assets/dd78624a-a396-41c4-956c-c5f3e7e74479" />
