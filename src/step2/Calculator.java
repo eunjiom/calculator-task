@@ -4,55 +4,39 @@ import java.util.ArrayList;
 
 public class Calculator {
 
-    private ArrayList<Integer> names = new ArrayList<>();
-
+    private final ArrayList<Integer> results = new ArrayList<>();
 
     public int calculator(int a, int b, char op) {
 
         int result = 0;
 
         switch (op) {
-            case '+':
-                result = a + b;
-                break;
-
-            case '-':
-                result = a - b;
-                break;
-
-            case '*':
-                result = a * b;
-                break;
-
-            case '/':
+            case '+' -> result = a + b;
+            case '-' -> result = a - b;
+            case '*' -> result = a * b;
+            case '/' -> {
                 if (b == 0) {
-                    System.out.println("b에 0을 입력할 수 없습니다");
-                    return 0;
+                    throw new ArithmeticException("0으로 나눌 수 없습니다.");
                 }
                 result = a / b;
-                break;
+            }
 
-            default:
-                System.out.println("잘못된 연산자 입니다.");
-                return 0;
+            default -> throw new IllegalArgumentException("잘못된 연산자 입니다.");
 
         }
 
-        names.add(result);
+        results.add(result);
         return result;
 
     }
 
+    // getter
     public ArrayList<Integer> getResult() {
-        return names;
-    }
-
-    public void setResult(ArrayList<Integer> newResult) {
-        this.names = newResult;
+        return results;
     }
 
     public void removeResult() {
-        names.remove(0);
+        results.remove(0);
     }
 }
 
