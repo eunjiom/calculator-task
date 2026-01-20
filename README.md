@@ -93,3 +93,13 @@ Calculator 클래스에서 연산을 수행하고, 연산 결과를 컬렉션에
 
 <img width="532" height="839" alt="step2 흐름" src="https://github.com/user-attachments/assets/a727986c-c94c-430e-ac8f-1fd86c0cdb4f" />
 
+**8. 변경된 점**
+* 변수명을 직관적으로 변경(names > results)
+* while 조건 직관적으로 변경(exit 입력시 종료, 아니면 반복)
+* exit 입력 전에 저장된 결과 조회 및 삭제 가능
+* final로 저장결과 리스트를 보호하여 getter로는 읽기만 가능 / setter 삭제
+* throw로 예외처리
+
+# 3️⃣ Step 3
+
+
