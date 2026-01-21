@@ -40,6 +40,14 @@ public class Main {
                 System.out.println("가장 먼저 저장된 결과 삭제 후: " + calculator.getResult());
             }
 
+            System.out.println("특정 값보다 큰 결과를 조회하시겠습니까? yes or no:");
+            String query = sc.nextLine();
+            if("yes".equals(query)){
+                System.out.println("기준 값을 입력하세요: ");
+                double threshold = Double.parseDouble(sc.nextLine());
+                System.out.println("기준보다 큰 결과: " +calculator.getResultsGreaterThan(threshold));
+            }
+
             System.out.println("종료를 원하면 exit 입력");
             exit = sc.nextLine();
 

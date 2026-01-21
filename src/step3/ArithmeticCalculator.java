@@ -1,6 +1,8 @@
 package step3;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ArithmeticCalculator {
 
@@ -28,6 +30,13 @@ public class ArithmeticCalculator {
     public void removeResult() {
         results.remove(0);
         }
+
+    // 특정 값보다 큰 결과 조회
+    public List<Double> getResultsGreaterThan(double threshold){
+        return results.stream() //리스트 값을 펼친다
+                .filter(v -> v > threshold) // 입력 값보다 큰 경우
+                .collect(Collectors.toList());
     }
 
+    }
 
